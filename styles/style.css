@@ -1,4 +1,11 @@
-
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -14,6 +21,8 @@
   position: relative;
   align-items: center;
   margin: 0;
+  overflow: hidden;
+  margin-bottom: 100px;
 }
 .header__main-illustration {
   position: absolute;
@@ -39,12 +48,13 @@
   right: 0;
   top: 64px;
   z-index: 1;
-  transition-property: transform;
+  animation: rotation 20s ease-in-out infinite ;
+  /* transition-property: transform;
   transition-duration: 20s;
   transition-timing-function: ease-in-out;
-  transition-delay: infinite;
+  transition-delay: infinite; */
 }
-.header__square-pic:hover {
+.rotation {
   transform: rotate(360deg);
 
 }
@@ -78,16 +88,21 @@
   color:  #2f80ed;
   text-decoration: none;
 }
+.header__link:hover {
+  opacity: .4;
+  transition: opacity 2s ease;
+}
 .description {
   display: flex;
   justify-content:center;
 }
 .two-columns {
   display: flex;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
   width: 80%;
   justify-content: space-between;
+  border: red 3px solid;
 }
 .two-columns__brief {
   width: 175px;
@@ -192,6 +207,8 @@
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 100px;
+  border: solid 3px red;
 }
 .section-title {
   width: 60%;
@@ -219,11 +236,12 @@
   width: 920px;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
   margin-top: 0;
   padding: 0;
+
   border: #d5ee48 3px solid;
 }
+
 .cards__image {
   margin-top: 60px;
   margin-bottom: 43px;
@@ -238,11 +256,15 @@
 .cards__item {
   display: flex;
   flex-direction: column;
-  width: 241px;
+  width: 233px;
   padding-left: 0;
   /* margin-top: 60px; */
   list-style: none;
+  margin-right: 100px;
   border: #ed2f2f 3px solid;
+}
+.cards__item:nth-of-type(3n) {
+margin-right: 0;
 }
 .cards__title {
   line-height: 1.15;
@@ -286,6 +308,9 @@ margin-right: 0;
 }
 
 .oakley {
+  margin-top: -150px;
+  padding-top: 160px;
+  background-color: #f2f2f2;
   display: flex;
   justify-content:center;
 }
@@ -296,34 +321,50 @@ margin-right: 0;
 .khan__container {
   margin-left: auto;
   margin-right: auto;
+  margin-top: 105px;
   width: 80%;
   border: #ed2f2f 3px solid;
 }
 .khan__author {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 30px;
   line-height: 42px;
   font-weight: normal;
   border: #ed2f2f 3px solid;
 }
 .khan__title {
+  margin-top: 0;
+  margin-bottom: 50px;
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
+  border: #ed2f2f 3px solid;
 }
 .khan__quote {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  width: 790px;
+  margin: 0;
+  margin-bottom: 36px;
+  border: #ed2f2f 3px solid;
 }
 .khan__quote-author {
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  border: #ed2f2f 3px solid;
 }
 .khan__quote-author-subline {
   line-height: 1.15;
   font-size: 24px;
   font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 68px;
+  border: #ed2f2f 3px solid;
 }
 .khan__book-container {
   display: flex;
@@ -341,6 +382,12 @@ margin-right: 0;
   margin-left: 48px;
   margin-top: 0;
   font-weight: normal;
+  color: #2f80ed;
+  text-decoration: none;
+}
+.khan__buy-link:hover {
+  opacity: .4;
+  transition: opacity 2s ease;
 }
 .feynman {
   position: relative;
@@ -350,6 +397,7 @@ margin-right: 0;
   z-index: 2;
   height: 890px;
   background-color:  #f2f2f2;
+
 }
 .feynman__title {
   width: 648px;
@@ -392,6 +440,10 @@ margin-right: 0;
   text-decoration: none;
   color: #2f80ed;
 }
+.feynman__link:hover {
+  opacity: .4;
+  transition: opacity 2s ease;
+}
 .feynman__link-color {
   text-decoration: none;
   color: #2f80ed;
@@ -415,6 +467,7 @@ margin-right: 0;
   height: 877px;
   background-size: cover;
   background-image: url(../images/kaufman-triangle.svg);
+  animation: rotation 20s ease-in-out infinite ;
 }
 .table_theme_dark {
   z-index: 2;
@@ -458,7 +511,10 @@ border: violet solid 3px;
   width: 270px;
   height: 38px;
 }
-
+.resources__logo:hover {
+  opacity: .4;
+  transition: opacity 2s ease;
+}
 
 .footer {
   position: relative;
@@ -515,6 +571,10 @@ border: violet solid 3px;
    font-weight: normal;
    font-size: 18px;
  }
+ .footer__column-link:hover {
+  opacity: .4;
+  transition: opacity 2s ease;
+}
  .footer__column-links {
    display: flex;
   flex-direction: column;
