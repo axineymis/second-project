@@ -1,0 +1,5 @@
+
+.footer__social-link {
+  display: flex;
+  flex-direction: column;
+ }
