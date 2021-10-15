@@ -9,5 +9,6 @@
 
 .rotation {
   transform: rotate(360deg);
+  animation: rotation 20s ease-in-out infinite;
 }
 
